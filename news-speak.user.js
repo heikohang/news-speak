@@ -246,7 +246,7 @@ function getArticle_err() {
 function getArticle_delfi() {
   let article_title = document.getElementsByClassName("C-article-info__title")[0].innerText;
   //let article_time = document.getElementsByClassName("pubdate ng-binding")[0].innerText;
-  let article_lead = document.getElementsByClassName("C-fragment C-fragment-html C-article-info__lead C-fragment-html--paragraph")[0].innerText;
+  let article_lead = document.getElementsByClassName("C-article-info__lead")[0].innerText;
   let article_content = document.getElementsByClassName("C-fragment C-fragment-html C-fragment-html--paragraph");
   let article_text = article_title+". "+". "+article_lead;
 
@@ -271,7 +271,7 @@ function getArticle(provider) {
     }
     case "delfi": {
       let article_title = document.getElementsByClassName("C-article-info__title")[0].innerText;
-      let article_lead = document.getElementsByClassName("C-fragment C-fragment-html C-article-info__lead C-fragment-html--paragraph")[0].innerText;
+      let article_lead = document.getElementsByClassName("C-article-info__lead")[0].innerText;
       let article_content = document.getElementsByClassName("C-fragment C-fragment-html C-fragment-html--paragraph");
       let article_text = article_title+". "+". "+article_lead;
       for (const [key, value] of Object.entries(article_content)) {
